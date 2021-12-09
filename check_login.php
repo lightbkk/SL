@@ -19,7 +19,6 @@ include("C:/AppParams/params.php");
                 FROM users 
                 WHERE UserName=? AND PwdHash=?
                 ";
-
     $conn = mysqli_connect($DB_URL, $DB_USER, $DB_PWD, $DB_NAME);
     //необходимая процедура передачи параметров в sql-выражение
     $statement = mysqli_prepare($conn, $sql);
