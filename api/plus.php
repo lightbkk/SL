@@ -1,4 +1,5 @@
 <?php
+session_start();
 
 
 //Это комментарий
@@ -12,10 +13,10 @@ $z = $x + $y;
 //2. слабый пароль
 //3. секрет в коде
 
- 
+//$user = isset($_COOKIE['user']);
 include("C:/AppParams/params.php");
 $conn = mysqli_connect($DB_URL, $DB_USER, $DB_PWD, $DB_NAME);
- 
+
 $sql = "INSERT INTO log(Number1,Number2,Result,UserID) VALUES($x,$y,$z,'anonym')";
 mysqli_query($conn, $sql);
 //echo (mysqli_error($conn));
