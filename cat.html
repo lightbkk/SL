@@ -1,0 +1,35 @@
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<style>
+			.picture-holder a {
+				display: block;
+				margin-bottom: 10px;
+			}
+		</style>
+
+		<script>
+			function increase_cat() {
+				document.getElementById("cat").style.width = "300px";
+			}
+		</script>
+		<script type="text/javascript">
+			function miau_cat() {
+				var myAudio= new Audio;
+				myAudio.src="sound/simp.wav";
+				myAudio.play();
+			}
+		</script>
+
+		<title>Кошка</title>
+		<link rel="stylesheet" href="styles/main.css"		
+	</head>
+	<body>
+		<h1>Это кошка!</h1>
+		<div class="picture-holder">
+			<a href="index_.html">Оглавление сайта</a>
+			<img src="images/cat.jpg" onclick="increase_cat() ;" mouseover="miau_cat() ;"
+			style="width: 200px" id="cat" />
+		</div>
+	</body>
+</html>
