@@ -4,7 +4,6 @@ $x = $_REQUEST["x"];
 $y = $_REQUEST["y"];
 $z = $x - $y;
 
-
 include("C:/AppParams/params.php");
 $conn = mysqli_connect($DB_URL, $DB_USER, $DB_PWD, $DB_NAME);
  
