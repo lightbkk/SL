@@ -13,12 +13,10 @@ include(getenv("MYAPP_CONFIG"));
     $user = $_REQUEST["user"];
     $pwd = $_REQUEST["pwd"];
     $hash = hash('sha256', $pwd);
-    $sql_select = "SELECT ID, UserName
-    FROM users 
-    WHERE UserName= '$user'
-    ";
-    $sql_insert = "INSERT INTO users
-    SET UserName= '$user', PwdHash= '$hash'";
+    $sql_select = "SELECT ID FROM users WHERE UserName='$user'";
+    var_dump($sql_select);
+    //$sql_insert = "INSERT INTO users
+    //SET UserName= '$user', PwdHash= '$hash'";
    
     $conn = mysqli_connect($DB_URL, $DB_USER, $DB_PWD, $DB_NAME);
     //$statement = mysqli_prepare($conn, $sql_select);
@@ -39,9 +37,16 @@ include(getenv("MYAPP_CONFIG"));
     } 
     else {
         $conn = mysqli_connect($DB_URL, $DB_USER, $DB_PWD, $DB_NAME);
+        $sql_insert = "INSERT INTO users SET UserName='$user',PwdHash='$hash'";
         mysqli_query($conn,$sql_insert)
+        echo (mysqli_error($conn));
+        mysqli_close($conn);
+    
+
         echo ("Новый прользователь добавлен");
         echo ('<meta http-equiv="refresh" content="2; URL=index_.html">');
+
+        echo (mysqli_error($conn));
         mysqli_close($conn);
     }
     ?>
