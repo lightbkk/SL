@@ -1,6 +1,5 @@
 <?php
 session_start();
-//echo "pass" . getenv("MYAPP_CONFIG");
 include(getenv("MYAPP_CONFIG"));
 ?>
 
