@@ -66,6 +66,7 @@ if (!isset($_SESSION["user"])) {
 </head>
 
 <body>
+    <a href="index_.html">вернуться на портал</a>  
     <h1>Калькулятор</h1>
     <input id="x" /> <br />
     <input id="y" /> <br />

@@ -36,7 +36,8 @@ if (!isset($_SESSION["user"])) {
     </script>
 </head>
 
-<body onload="getlog();">
+<body onload="getlog();"></body>
+    <a href="index_.html">вернуться на портал</a>   
     <h1>Все Ваши вычисления</h1>
     <div id="display"></div>
     <h2 id="amounte"></h2>

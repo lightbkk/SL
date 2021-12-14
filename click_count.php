@@ -8,6 +8,7 @@ session_start();
 </head>
 
 <body>
+    <a href="index_.html">вернуться на портал</a>  
     <h1>считаем щелчки</h1>
     <form>
         <button id="btn1" ;">Щелкнуть!</button>
