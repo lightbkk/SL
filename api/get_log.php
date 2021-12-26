@@ -1,6 +1,6 @@
 <?php
 session_start();
-include("./include/params.php");
+include("../include/params.php");
 if (!isset($_SESSION["user"])) {
     echo ('<meta http-equiv="refresh" content="2; URL=../login.php">');
     die("Требуется авторизация!");

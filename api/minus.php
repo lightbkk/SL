@@ -1,6 +1,6 @@
 <?php
 session_start();
-include("./include/params.php");
+include("../include/params.php");
 
 
 $x = $_REQUEST["x"];
